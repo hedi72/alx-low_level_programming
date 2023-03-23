@@ -4,9 +4,7 @@
 	 * Return: 0
 	 */
 
-        /**
-	 *h
-        */
+
 	int main(void)
 	{
 	_putchar('_');
