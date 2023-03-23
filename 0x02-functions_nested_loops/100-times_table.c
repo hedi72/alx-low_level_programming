@@ -1,50 +1,50 @@
 #include "main.h"
-
 /**
- * print_times_table - print multiplication table up to n
- * @n: integer
+ * print_times_table - prints out the n times table, starting with 0
+ * @n: times table
  */
-
 void print_times_table(int n)
 {
-	int i;
-	int j;
-	int x;
+int x, y, z, k, t;
 
-	if (n >= 0 && n <= 15)
+	for (x = 0; x <= n; x++)
 	{
-		for (i = 0; i <= n; i++)
+		for (y = 0; y <= n; y++)
 		{
-			for (j = 0; j <= n; j++)
+			z = x * y;
+			if (z == 0 && y == 0)
+				_putchar(z + '0');
+			else if (z > 99)
 			{
-				x = (i * j);
-				if (j == 0)
-					_putchar('0' + x);
-				else
-				{
-					_putchar(',');
-					_putchar(' ');
-					if (x <= 9)
-					{
-						_putchar(' ');
-						_putchar(' ');
-						_putchar('0' + x);
-					}
-					else if (x > 9 && x < 100)
-					{
-						_putchar(' ');
-						_putchar('0' + (x / 10));
-						_putchar('0' + (x % 10));
-					}
-					else if (x >= 100)
-					{
-						_putchar('0' + (x / 100));
-						_putchar('0' + ((x / 10) % 10));
-						_putchar('0' + (x % 10));
-					}
-				}
+				k = z % 10;
+				t = (z / 10) % 10;
+				z /= 100;
+				_putchar(',');
+				_putchar(' ');
+				_putchar(z + '0');
+				_putchar(t + '0');
+				_putchar(k + '0');
 			}
-			_putchar('\n');
+			else if (z > 9)
+			{
+				k = z % 10;
+				z /= 10;
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(z + '0');
+				_putchar(k + '0');
+
+			}
+			else
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(z + '0');
+			}
 		}
+		_putchar('\n');
 	}
 }
