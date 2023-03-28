@@ -1,15 +1,21 @@
 #include "main.h"
 
 /**
- * main - check the code for Holberton School students.
+ *puts2 - prints every character of a string
+ *@str: A pointer to an int that will be changed
  *
- * Return: Always 0.
+ *Return: void which means it is correct
  */
-int main(void)
-{
-    char *str;
 
-    str = "0123456789";
-    puts2(str);
-    return (0);
+void puts2(char *str)
+{
+int a;
+
+for (a = 0; str[a] != '\0'; a++)
+{
+if (a % 2 == 0)
+_putchar (str[a]);
+}
+
+_putchar ('\n');
 }
