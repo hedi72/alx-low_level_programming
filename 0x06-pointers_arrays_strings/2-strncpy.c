@@ -6,21 +6,18 @@
 *@n: number of taken elements from second string
 *Return: pointer to char
 */
-
-char *_strncpy(char *dest, const char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
-int len = 0;
-while (len < n && src[len] != '\0')
+int j = 0;
+while ((j < n) && (src[j] != '\0'))
 {
-len++;
+dest[j] = src[j];
+j++;
 }
-for (int j = 0; j < len; j++)
+while (j < n)
 {
-*(dest + j) = *(src + j);
-}
-for (int j = len; j < n; j++)
-{
-*(dest + j) = '\0';
+dest[j] = '\0';
+j++;
 }
 return (dest);
 }
