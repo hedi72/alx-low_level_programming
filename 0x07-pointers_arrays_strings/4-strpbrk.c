@@ -1,10 +1,12 @@
 #include "main.h"
+
 /**
- *_strpbrk - returns first occurence of accept in s
+ * _strpbrk - returns first occurence of accept in s
  * @s: pointer to string
  * @accept: pointer
- * Return : first occurence
+ * Return: NULL if character is not found, return pointer first
  */
+
 char *_strpbrk(char *s, char *accept)
 {
 int i = 0, j = 0, t = 0;
