@@ -6,15 +6,20 @@
 *@c: character
 *Return: pointer of first occurence of c
 */
+
 char *_strchr(char *s, char c)
 {
-while (*s != '\0')
+int i = 0, l = 0;
+while (s[l])
 {
-if (*s == c)
+l++;
+}
+for (i = 0; i <= l; i++)
 {
-return (s);
+if (s[i] == c)
+{
+return (&(s[i]));
 }
-s++;
 }
-return (NULL);
+return (0);
 }
