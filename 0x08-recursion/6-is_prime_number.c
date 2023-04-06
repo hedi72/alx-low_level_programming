@@ -12,7 +12,7 @@ return (iprime(2, n));
 * iprime - checks if a number is prime or not
 *@i: int
 *@n: int
-*Return: 1 if prime else 0 
+*Return: 1 if prime else 0
 */
 int iprime(int i, int n)
 {
