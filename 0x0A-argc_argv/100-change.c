@@ -3,14 +3,14 @@
 
 /**
  * main - add positive numbers
- * @argc: int 
+ * @argc: int
  * @argv: array of strings
  * Return: 0
  */
 int main(int argc, char **argv)
 {
 int cents, c = 0;
-if(argc != 2)
+if (argc != 2)
 {
 printf("error\n");
 return (1);
