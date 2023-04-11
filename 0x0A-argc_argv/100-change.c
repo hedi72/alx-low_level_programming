@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main - add positive numbers
+ * main - add positive number
  * @argc: int
  * @argv: array of strings
  * Return: 0
