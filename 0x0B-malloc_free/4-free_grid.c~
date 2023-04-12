@@ -1,0 +1,22 @@
+#include <stdlib.h>
+#include "main.h"
+/**
+ * free_grid - returns a pointer to 2d array
+ * @grid: 2d
+ * @height: int
+ */
+void free_grid(int **grid, int height)
+{
+if (grid == NULL) {
+return;
+}
+int i;
+for (i = 0; i < height; i++)
+{
+if (grid[i] != NULL) {
+free(grid[i]);
+ grid[i] = NULL;
+}
+}
+free(grid);
+}
