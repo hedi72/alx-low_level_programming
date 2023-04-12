@@ -1,0 +1,40 @@
+#include <stdlib.h>
+#include "main.h"
+/**
+ * alloc_grid - returns a pointer to 2 dim array
+ * @width: int
+ * @height: int
+ * Return: pointer to 2 dim array of int
+ */
+int **alloc_grid(int width, int height)
+{
+int **dim, i, k, j;
+if (width <= 0 || height <= 0)
+{
+return (NULL);
+}
+dim = malloc(sizeof(int *) * height);
+if (dim == NULL)
+{
+return (NULL);
+}
+for (i = 0; i < height; i++)
+{
+dim[i] = malloc(sizeof(int) * width);
+if (dim[i] == NULL)
+{
+for (k = 0; k < i; k++)
+{
+free(dim[k]);
+}
+free(dim);
+return (NULL);
+}
+
+for (j = 0; j < width; j++)
+{
+dim[i][j] = 0;
+}
+}
+return (dim);
+}
