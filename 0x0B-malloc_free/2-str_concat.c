@@ -17,7 +17,8 @@ if (s1 != NULL)
 {
 while (s1[l1] != '\0')
 {
-l1++;}
+l1++;
+}
 }
 
 if (s2 != NULL)
@@ -36,7 +37,8 @@ return (NULL);
 
 for (i = 0; i < l1; i++)
 {
-new[i] = s1[i];}
+new[i] = s1[i];
+}
 
 for (i = 0; i < l2; i++)
 {
