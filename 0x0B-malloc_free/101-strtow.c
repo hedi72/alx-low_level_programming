@@ -8,7 +8,7 @@
  */
 char **strtow(char *str)
 {
-  int i, x, y, j, k, len, word_count;
+int i, x, y, j, k, len, word_count;
 char **words;
 if (str == NULL || *str == '\0')
   return (NULL);
