@@ -8,10 +8,10 @@
  */
 char **strtow(char *str)
 {
-if (str == NULL || *str == '\0')
-return (NULL);
-int i, j, k, len, word_count;
+  int i, x, y, j, k, len, word_count;
 char **words;
+if (str == NULL || *str == '\0')
+  return (NULL);
 for (i = 0, len = 0, word_count = 0; str[i] != '\0'; i++)
 {
 if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
@@ -37,7 +37,7 @@ free(words[k]);
 free(words);
 return (NULL);
 }
-for (int x = i, y = 0; x < j; x++, y++)
+for (x = i, y = 0; x < j; x++, y++)
 {
 words[word_count][y] = str[x];
 }
