@@ -13,7 +13,7 @@ char *new;
 int i, j, len = 0, k = 0;
 if (ac == 0 || av == NULL)
 {
-return NULL;
+return (NULL);
 }
 
 for (i = 0; i < ac; i++)
@@ -30,7 +30,7 @@ len++;
 new = malloc(sizeof(char) * (len + 1));
 if (new == NULL)
 {
-return NULL;
+return (NULL);
 }
 
 for (i = 0; i < ac; i++)
@@ -47,5 +47,5 @@ k++;
 }
 
 new[k] = '\0';
-return new;
+return (new);
 }
