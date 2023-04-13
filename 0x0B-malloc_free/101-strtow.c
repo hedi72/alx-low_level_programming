@@ -2,24 +2,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * words_count - count number of words in a given string.
+ * strtow - function that splits a string into words.
  * @str: given string.
- * @l: lenght of string.
  * Return: number of words.
  */
 char **strtow(char *str)
 {
-  int x, y, i, j, k, len, word_count;
-char **words;
 if (str == NULL || *str == '\0')
 return (NULL);
-
+int i, j, k, len, word_count;
+char **words;
 for (i = 0, len = 0, word_count = 0; str[i] != '\0'; i++)
 {
 if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
 word_count++;
 len++;
 }
+if (word_count == 0)
+return (NULL);
 words = malloc((word_count + 1) * sizeof(char *));
 if (words == NULL)
 return (NULL);
@@ -37,7 +37,7 @@ free(words[k]);
 free(words);
 return (NULL);
 }
-for (x = i, y = 0; x < j; x++, y++)
+for (int x = i, y = 0; x < j; x++, y++)
 {
 words[word_count][y] = str[x];
 }
