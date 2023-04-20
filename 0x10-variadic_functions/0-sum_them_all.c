@@ -15,7 +15,7 @@ if (n == 0)
 {
 return (0);
 }
-va_start(ls,n);
+va_start(ls, n);
 va_copy(ls_copy, ls);
 sum = 0;
 for (i = 0; i < n; i++)
