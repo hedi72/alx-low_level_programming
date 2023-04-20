@@ -5,7 +5,7 @@
 * @array: pointeur vers un tableau d'entiers
 * @size: taille du tableau
 * @cmp: pointeur vers une fonction de comparaison
-* Return: index de l'entier dans le tableau, -1 si non trouvé ou en cas d'erreur
+* Return: index de l'entier dans le tableau
 */
 int int_index(int *array, int size, int (*cmp)(int))
 {
