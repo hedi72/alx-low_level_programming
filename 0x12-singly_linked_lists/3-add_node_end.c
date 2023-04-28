@@ -1,5 +1,5 @@
 #include "lists.h"
-
+#include <string.h>
 /**
  * add_node_end - Adds a new node at the end of a list_t list.
  * @head: Pointer to a pointer to the first element of the list.
@@ -22,7 +22,6 @@ return (NULL);
 }
 new_node->len = strlen(str);
 new_node->next = NULL;
-/* If the list is empty, make the new node the first element. */
 if (*head == NULL)
 {
 *head = new_node;
