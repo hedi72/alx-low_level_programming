@@ -4,7 +4,7 @@
  * wildcmp - comares two strings
  * @s1: first string
  * @s2: second string
- * Return: 1 if the string can be considered identical
+ * Return: 1 if the string can be considered identica
  */
 int wildcmp(char *s1, char *s2)
 {
