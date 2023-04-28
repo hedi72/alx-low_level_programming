@@ -13,7 +13,7 @@
 
 void *_realloc(void *ptr, unsigned int old_s, unsigned int new_s)
 {
-  unsigned int i;
+unsigned int i;
 void *new_ptr;
 if (new_s == old_s)
 return (ptr);
@@ -38,7 +38,7 @@ return (NULL);
 
 if (new_s > old_s)
 {
-for ( i = 0; i < old_s; i++)
+for (i = 0; i < old_s; i++)
 *((char *)new_ptr + i) = *((char *)ptr + i);
 }
 else
