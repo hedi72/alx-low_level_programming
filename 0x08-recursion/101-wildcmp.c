@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 /**
  * wildcmp - comares two strings
  * @s1: first string
@@ -11,7 +12,7 @@ if(*s2 == '*')
 {
 if(*s1 == NULL && *(s2+1) == NULL)
 return (1);
-else if (*s1 == NULL ||b*(s2 + 1) == NULL)
+else if (*s1 == NULL || b*(s2 + 1) == NULL)
 return (0);
 else if (wildcmp(s1, s2 + 1) || wildcmp(s1 + 1, s2))
 return (1);
