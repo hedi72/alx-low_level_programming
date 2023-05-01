@@ -18,7 +18,7 @@ return (0);
 }
 while (tmp != NULL)
 {
-printf("%d\n", h->n);
+printf("%d\n", tmp->n);
 count++;
 tmp = tmp->next;
 }
