@@ -7,6 +7,9 @@
  * listint_s - singly linked list
  * @n: int
  * @next: pointer to the next node
+ *
+ * Description: singly linked list node structure
+ * for alx-holberton project
  */
 typedef struct listint_s
 {
