@@ -13,7 +13,7 @@ unsigned int count = 0;
 while (diff)
 {
 count += diff & 1;
-diff = >> 1;
+diff = diff >> 1;
 }
 return (count);
 }
