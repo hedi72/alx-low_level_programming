@@ -19,12 +19,10 @@ return (0);
 bytes_read = read(file_descriptor, buffer, letters);
 if (bytes_read == -1)
 {
-   
 free(buffer);
 close(file_descriptor);
-return 0;
+return (0);
 }
-
 buffer[bytes_read] = '\0';
 bytes_written = write(STDOUT_FILENO, buffer, bytes_read);
 if (bytes_written == -1 || bytes_written != bytes_read)
@@ -33,7 +31,6 @@ free(buffer);
 close(file_descriptor);
 return (0);
 }
-
 free(buffer);
 close(file_descriptor);
 return (bytes_written);
